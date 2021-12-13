@@ -14,6 +14,11 @@ matplotlib.rc('font', family=font_name)
 
 fig, ax1 = plt.subplots()
 
+연도별출산율.plot(kind='line', x='날짜', ax=ax1)
+plt.title("연도별 조출생률")
+
+fig, ax1 = plt.subplots()
+
 주택매매가격지수.plot(kind='line', x='날짜', y='총지수[2019.01=100]', color='green', ax=ax1)
 ax1.set_ylabel('주택매매가격지수(2019.01=100)')
 ax2 = ax1.twinx()
@@ -47,4 +52,5 @@ ax2 = ax1.twinx()
 연도별출산율.plot(kind='line', x='날짜', y='서울특별시', color='red', ax=ax2)
 ax2.set_ylabel('서울 조출생률')
 plt.title("서울 주택전세가격지수와 조출생률")
+
 plt.show()
